@@ -1,3 +1,7 @@
-import Story from "./story";
+import React from "react";
+import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import App from "./components/App";
 
-console.log(Story());
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
