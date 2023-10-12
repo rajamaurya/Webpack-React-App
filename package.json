@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/rajamaurya/Webpack-React-App#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
