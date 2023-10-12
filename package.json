@@ -1,0 +1,28 @@
+{
+  "name": "story_teller",
+  "version": "1.0.0",
+  "description": "Webpack Babel JavaScript React",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "build": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajamaurya/Webpack-React-App.git"
+  },
+  "keywords": [
+    "React",
+    "Webpack"
+  ],
+  "author": "Raja Krishn Mourya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajamaurya/Webpack-React-App/issues"
+  },
+  "homepage": "https://github.com/rajamaurya/Webpack-React-App#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
