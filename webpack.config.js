@@ -1,31 +1,45 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const EslintWebpackPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
+    bundle: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
   },
   module: {
     rules: [
       {
-        test: /\.js|jsx$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Story Teller App",
-      filename: "index.html",
-      template: "src/index.html",
+      title: 'Story Teller App',
+      filename: 'index.html',
+      template: 'src/index.html',
+    }),
+    new EslintWebpackPlugin({
+      context: path.resolve(__dirname, '/*.js'),
+      extensions: ['js'],
+      emitError: true,
+      emitWarning: true,
+      failOnWarning: false,
+      failOnError: false,
+      // Toggle autofix
+      fix: false,
+      cache: false,
     }),
   ],
-};
+}
