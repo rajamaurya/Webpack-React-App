@@ -30,10 +30,25 @@ const StoryBooks = () => {
     }
     loadStoryBooks()
   }, [])
+  const filterHandler = (e) => {
+    e.preventDefault()
+  }
+  const sortItemsrHandler = (e) => {
+    e.preventDefault()
+  }
 
   return (
     <>
       <div className="storyBooksListContainer">
+        <nav className="nav-items">
+          <div className="total_count">{storyBooks.length} records</div>
+          <div className="filter" onClick={filterHandler}>
+            Filters
+          </div>
+          <div className="sort-items" onClick={sortItemsrHandler}>
+            SortBy
+          </div>
+        </nav>
         <div className="row">
           <div className="header">
             {headers.map((header) => {

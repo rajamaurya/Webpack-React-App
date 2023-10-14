@@ -4,6 +4,33 @@
   border: 1px solid gray;
   box-shadow: rgba(238, 239, 240, 0.2) 0px 8px 24px;
 }
+.nav-items {
+  width: 79%;
+  position: absolute;
+  padding-bottom: 10px;
+  top: 10%;
+  left: 10%;
+}
+.total_count {
+  float: left;
+}
+.filter {
+  float: right;
+  width: 70px;
+  text-align: center;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 2px;
+}
+.sort-items {
+  float: right;
+  width: 70px;
+  text-align: center;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 2px;
+  margin-right: 10px;
+}
 .row {
   width: 80%;
   display: inline-block;
@@ -28,6 +55,7 @@
 .header-name {
   width: 120px;
   padding: 16px;
+  text-decoration: underline;
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
   color: darkblue;

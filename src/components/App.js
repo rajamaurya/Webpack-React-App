@@ -10,7 +10,7 @@ const App = () => {
   }
   return (
     <section className="container">
-      <div className="header">
+      <div className="header-home">
         <header>Story Books Home</header>
       </div>
       <div className="story-btn">
