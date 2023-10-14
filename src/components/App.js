@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './App.css'
+
 const App = () => {
+  const navigate = useNavigate()
+  const searchHandler = (e) => {
+    e.preventDefault()
+    return navigate('/books')
+  }
   return (
     <section className="container">
       <div className="header">
@@ -13,7 +20,7 @@ const App = () => {
             fontSize: '18px',
             boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
           }}
-          onClick={() => {}}
+          onClick={searchHandler}
         >
           Search
         </button>

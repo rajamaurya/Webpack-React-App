@@ -1,0 +1,38 @@
+.storyBooksListContainer {
+  width: 100%;
+  background: white;
+  border: 1px solid gray;
+  box-shadow: rgba(238, 239, 240, 0.2) 0px 8px 24px;
+}
+.row {
+  width: 80%;
+  display: inline-block;
+  margin: 0px auto;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  border: 1px solid gray;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.header {
+  width: 90%;
+  padding: 20px;
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-flex;
+  flex-direction: row;
+}
+.header-name {
+  width: 120px;
+  padding: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  color: darkblue;
+  font: 700;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  box-shadow: rgba(238, 239, 240, 0.2) 0px 8px 24px;
+}
