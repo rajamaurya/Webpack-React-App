@@ -36,18 +36,39 @@ const StoryBooks = () => {
   const sortItemsrHandler = (e) => {
     e.preventDefault()
   }
-
+  const addNewBookHandler = (e) => {
+    e.preventDefault()
+  }
   return (
     <>
       <div className="storyBooksListContainer">
+        <div className="store-header">Online Book Store</div>
+        <h4
+          style={{
+            float: 'left',
+            marginLeft: '10%',
+            marginTop: '6%',
+            color: 'steelblue',
+          }}
+        >
+          Checkout_Prime_Books
+        </h4>
         <nav className="nav-items">
           <div className="total_count">{storyBooks.length} records</div>
+
           <div className="filter" onClick={filterHandler}>
             Filters
           </div>
-          <div className="sort-items" onClick={sortItemsrHandler}>
-            SortBy
+
+          <div className="add-book" onClick={addNewBookHandler}>
+            + Add Book
           </div>
+
+          <select className="sort-items" onChange={sortItemsrHandler}>
+            <option selected> Sort by: featured</option>
+            <option value="title">Price: low to high</option>
+            <option value="title">Price: high to low</option>
+          </select>
         </nav>
         <div className="row">
           <div className="header">

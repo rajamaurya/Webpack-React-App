@@ -9,7 +9,11 @@ const Book = ({ book }) => {
           <div className="item">{book.author}</div>
           <div className="item">{book.country}</div>
           <div className="item">
-            <img src={book.imageLink} alt="img" />
+            <img
+              className="book-image"
+              src="images/bhagavad-gita.png"
+              alt="img"
+            />
           </div>
           <div className="item">{book.language}</div>
           <div className="item">
