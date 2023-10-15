@@ -2,7 +2,9 @@
 
 <img width="957" alt="image" src="https://github.com/rajamaurya/Webpack-React-App/assets/23061771/5d5f1376-9203-4d44-b4ed-f3e9c7832524">
 
-# ----------------------------------------------------------------------------------------------
+<img width="492" alt="image" src="https://github.com/rajamaurya/Webpack-React-App/assets/23061771/b88df95a-387c-4762-9a5b-46bc52740346">
+
+<img width="484" alt="image" src="https://github.com/rajamaurya/Webpack-React-App/assets/23061771/3873bc1f-53a8-4ca6-8bdd-3d88eeeb98b0">
 
 # Installation Process
 
