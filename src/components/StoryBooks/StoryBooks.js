@@ -1,11 +1,16 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './StoryBooks.css'
 import Book from '../Book/Book'
+import AddBook from '../AddBook/AddBook'
+import { BookContextProvider } from '../context/bookContext'
 
 const StoryBooks = () => {
+  const { updatedBooksList } = useContext(BookContextProvider)
+
   const [storyBooks, setStoryBooks] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+
   const URL = 'api-data.json'
   const headers = [
     'Author',
@@ -13,7 +18,7 @@ const StoryBooks = () => {
     'ImageLink',
     'Language',
     'Link',
-    'Pages',
+    'Price',
     'Title',
     'Year',
   ]
@@ -25,7 +30,7 @@ const StoryBooks = () => {
         const books = await axios.get(URL)
         const data = books.data
         setIsLoading(false)
-        setStoryBooks(data)
+        setStoryBooks((prevData) => [...prevData, ...data, ...updatedBooksList])
       }, 2000)
     }
     loadStoryBooks()
@@ -36,9 +41,7 @@ const StoryBooks = () => {
   const sortItemsrHandler = (e) => {
     e.preventDefault()
   }
-  const addNewBookHandler = (e) => {
-    e.preventDefault()
-  }
+
   return (
     <>
       <div className="storyBooksListContainer">
@@ -60,9 +63,7 @@ const StoryBooks = () => {
             Filters
           </div>
 
-          <div className="add-book" onClick={addNewBookHandler}>
-            + Add Book
-          </div>
+          <AddBook />
 
           <select className="sort-items" onChange={sortItemsrHandler}>
             <option selected> Sort by: featured</option>

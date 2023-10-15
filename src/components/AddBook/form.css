@@ -1,0 +1,34 @@
+.book-form {
+  width: 45%;
+  background: white;
+  border: 1px solid lightgray;
+  box-shadow: rgba(238, 239, 240, 0.2) 4px 8px 24px;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+.form-item {
+  padding: 10px;
+  padding-left: 27%;
+  background: white;
+  box-shadow: rgba(238, 239, 240, 0.2) 4px 8px 24px;
+}
+.form-btn {
+  padding-left: 40%;
+  padding-bottom: 12px;
+  padding-top: 10px;
+  border-radius: 12px;
+  background: rgb(132, 195, 246);
+  box-shadow: rgba(238, 239, 240, 0.2) 4px 8px 24px;
+}
+
+.form-btn button {
+  width: 30%;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  color: slateblue;
+  border: 1px solid lightgray;
+  box-shadow: rgba(238, 239, 240, 0.2) 4px 8px 24px;
+}

@@ -22,7 +22,7 @@ const Book = ({ book }) => {
               link
             </Link>
           </div>
-          <div className="item">{book.pages}</div>
+          <div className="item">${book.pages}</div>
           <div className="item">{book.title}</div>
           <div className="item">{book.year}</div>
         </div>
