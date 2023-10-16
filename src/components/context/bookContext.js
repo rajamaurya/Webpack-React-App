@@ -12,12 +12,20 @@ const BookContext = ({ children }) => {
     setUpdatedBookList(book)
     navigate('/books')
   }
-  useEffect(() => {}, [updatedBooksList])
+  const sortBookList = (book) => {
+    console.log('Book :: ', book)
+    setUpdatedBookList(book)
+  }
+  useEffect(() => {
+    console.log('logged in effect')
+  }, [updatedBooksList])
   return (
     <BookContextProvider.Provider
       value={{
         updatedBooksList,
+        setUpdatedBookList,
         createBookClicked,
+        sortBookList,
       }}
     >
       {children}

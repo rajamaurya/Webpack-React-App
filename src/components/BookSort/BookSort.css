@@ -1,0 +1,9 @@
+.sort-items {
+  float: right;
+  width: 130px;
+  text-align: center;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 3px;
+  margin-right: 10px;
+}

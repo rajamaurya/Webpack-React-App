@@ -1,13 +1,8 @@
 import React, { useContext, useState } from 'react'
 import './form.css'
-import { useLocation } from 'react-router'
 import { BookContextProvider } from '../context/bookContext'
 
 const CreateBook = (props) => {
-  console.log('in createdBoook: ', props.state)
-  const location = useLocation()
-  console.log(location)
-
   const { updatedBooksList, createBookClicked } =
     useContext(BookContextProvider)
 
@@ -23,12 +18,10 @@ const CreateBook = (props) => {
   })
   const handleChange = (e) => {
     let { name, value } = e.target
-    console.log(name + ' : ' + value)
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
     }))
-    console.log(formData)
   }
   const createBook = (e) => {
     e.preventDefault()
