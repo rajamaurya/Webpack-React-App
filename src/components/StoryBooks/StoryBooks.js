@@ -5,6 +5,7 @@ import Book from '../Book/Book'
 import AddBook from '../AddBook/AddBook'
 import { BookContextProvider } from '../context/bookContext'
 import BookSort from '../BookSort/BookSort'
+import Filters from '../Filter/Filters'
 
 const StoryBooks = () => {
   const { updatedBooksList, sortBookList } = useContext(BookContextProvider)
@@ -44,9 +45,9 @@ const StoryBooks = () => {
     loadStoryBooks()
   }, [])
 
-  const filterHandler = (e) => {
-    e.preventDefault()
-  }
+  // const filterHandler = (e) => {
+  //   e.preventDefault()
+  // }
 
   return (
     <>
@@ -65,9 +66,10 @@ const StoryBooks = () => {
         <nav className="nav-items">
           <div className="total_count">{storyBooks.length} records</div>
 
-          <div className="filter" onClick={filterHandler}>
+          {/* <div className="filter" onClick={filterHandler}>
             Filters
-          </div>
+          </div> */}
+          <Filters />
           <AddBook />
           <BookSort bookstosort={storyBooks} />
         </nav>
